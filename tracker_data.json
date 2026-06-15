@@ -7,6 +7,14 @@
                 "color": "black",
                 "dress_type": "shirt"
             }
+        },
+        {
+            "face_embedding": "oval",
+            "body_embedding": "lean ",
+            "dress": {
+                "color": "white",
+                "dress_type": "suit"
+            }
         }
     ],
     "tracker_logs": [
@@ -19,6 +27,16 @@
             },
             "entry_time": "9:30",
             "exit_time": "10:30"
+        },
+        {
+            "face_embedding": "round",
+            "body_embedding": "lean",
+            "dress": {
+                "color": "black",
+                "dress_type": "shirt"
+            },
+            "entry_time": "8:30",
+            "exit_time": "9:30"
         }
     ]
 }
