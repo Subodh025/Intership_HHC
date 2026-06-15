@@ -1,0 +1,24 @@
+{
+    "persons": [
+        {
+            "face_embedding": "round",
+            "body_embedding": "lean",
+            "dress": {
+                "color": "black",
+                "dress_type": "shirt"
+            }
+        }
+    ],
+    "tracker_logs": [
+        {
+            "face_embedding": "round",
+            "body_embedding": "lean",
+            "dress": {
+                "color": "black",
+                "dress_type": "shirt"
+            },
+            "entry_time": "9:30",
+            "exit_time": "10:30"
+        }
+    ]
+}
