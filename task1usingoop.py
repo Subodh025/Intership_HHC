@@ -64,7 +64,7 @@ class TrackerLog:
 
 class TrackerSystem:
     DATA_FILE = Path("tracker_data.json")
-
+# To be done in sqlite 
     def __init__(self):
         self.persons = []
         self.logs = []
