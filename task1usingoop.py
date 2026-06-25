@@ -1,6 +1,6 @@
 import sqlite3
 
-from task1usingoop import DataBaseManager
+# from task1usingoop import DataBaseManager
 
 
 class Dress:
@@ -70,12 +70,12 @@ class TrackerSystem:
         self.db_manager.create_tables()
 
     def add_person(self):
-        face = input("Enter Face Embedding: ")
-        body = input("Enter Body Embedding: ")
+        face_embedding = input("Enter Face Embedding: ")
+        body_embedding = input("Enter Body Embedding: ")
         color = input("Enter Dress Color: ")
         dress_type = input("Enter Dress Type: ")
 
-        person_id = self.db_manager.create_person(face, body)
+        person_id = self.db_manager.create_person(face_embedding, body_embedding)
 
         self.db_manager.add_dress(
             person_id,
@@ -86,9 +86,9 @@ class TrackerSystem:
         print("Person Added Successfully")
 
     def remove_person(self):
-        face = input("Enter Face Embedding to Remove: ")
+        face_embedding = input("Enter Face Embedding to Remove: ")
 
-        person = self.db_manager.get_person_by_face(face)
+        person = self.db_manager.get_person_by_face(face_embedding)
 
         if not person:
             print("Person Not Found")
@@ -99,9 +99,9 @@ class TrackerSystem:
         print("Person Removed Successfully")
 
     def add_tracker_log(self):
-        face = input("Enter Face Embedding: ")
+        face_embedding = input("Enter Face Embedding: ")
 
-        person = self.db_manager.get_person_by_face(face)
+        person = self.db_manager.get_person_by_face(face_embedding)
 
         if not person:
             print("Person Not Found")
@@ -161,6 +161,7 @@ class TrackerSystem:
                 found = True
 
                 print(f"Person Face : {person['face_embedding']}")
+                print(f"Person Body : {person['body_embedding']}")
                 print(f"Entry Time  : {log['entry_time']}")
                 print(f"Exit Time   : {log['exit_time']}")
                 print("-" * 30)
@@ -181,7 +182,9 @@ class TrackerSystem:
             choice = input("Enter Choice: ")
 
             if choice == "1":
-                self.db_manager.create_person()
+                face_embedding = input("Enter Face Embedding: ")
+                body_embedding = input("Enter Body Embedding: ")
+                self.db_manager.create_person(face_embedding, body_embedding)
 
             elif choice == "2":
                 self.remove_person()
